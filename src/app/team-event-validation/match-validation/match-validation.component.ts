@@ -12,7 +12,7 @@ export class MatchValidationComponent implements OnInit {
   step3Data: any;
   step4Data: any;
   step5Data: any;
-  matchValidationPayload;
+  matchValidationPayload: any;
 
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
@@ -25,7 +25,7 @@ export class MatchValidationComponent implements OnInit {
     this.step5Data = matchData.step5Data;
   }
 
-  validateMatch() {
-    this.teamEventValidationService.validateMatch();
+  onValidateMatch(matchPayload) {
+    this.teamEventValidationService.validateMatch(matchPayload);
   }
 }

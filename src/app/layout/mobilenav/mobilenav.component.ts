@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { AuthService } from 'src/app/auth/auth.service';
-import { UserLogin } from 'src/app/auth/user-login.model';
-import { StaffRoles } from 'src/app/core/enums/staff-roles.enum';
+import { AuthService } from '../../auth/auth.service';
+import { UserLogin } from '../../auth/user-login.model';
+import { StaffRoles } from '../../core/enums/staff-roles.enum';
 
 @Component({
   selector: 'app-mobilenav',

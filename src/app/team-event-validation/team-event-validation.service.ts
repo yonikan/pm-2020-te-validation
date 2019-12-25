@@ -71,10 +71,12 @@ export class TeamEventValidationService {
   }
 
   validateTraining(trainingPayload) {
+    console.log('VALIDATE WORKS!');
     // sends this.trainingData to the backend
   }
 
-  validateMatch() {
+  validateMatch(matchayload) {
+    console.log('VALIDATE WORKS!');
     // sends this.matchgData to the backend
   }
 }

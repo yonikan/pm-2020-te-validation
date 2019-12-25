@@ -12,4 +12,7 @@ export class StepMatchSubsComponent implements OnInit {
   ngOnInit() {
   }
 
+  validateMatch() {
+
+  }
 }

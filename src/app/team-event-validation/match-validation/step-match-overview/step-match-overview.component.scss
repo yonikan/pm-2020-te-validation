@@ -2,5 +2,7 @@
 @import '../../../../styles/mixins';
 
 :host {
-    
+    .step-match-overview-container {
+        @include team-event-step;
+    }
 }

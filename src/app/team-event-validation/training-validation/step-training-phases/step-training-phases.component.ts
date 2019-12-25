@@ -12,5 +12,10 @@ export class StepTrainingPhasesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  validateTraining() {
+
   }
 }
