@@ -70,7 +70,7 @@ export class TeamEventValidationService {
     };
   }
 
-  validateTraining() {
+  validateTraining(trainingPayload) {
     // sends this.trainingData to the backend
   }
 

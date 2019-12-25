@@ -21,7 +21,7 @@ export class TrainingValidationComponent implements OnInit {
     this.step3Data = trainingData.step3Data;
   }
 
-  validateTraining() {
-    this.teamEventValidationService.validateTraining();
+  validateTraining(trainingPayload) {
+    this.teamEventValidationService.validateTraining(trainingPayload);
   }
 }

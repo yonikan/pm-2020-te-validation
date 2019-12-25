@@ -16,7 +16,7 @@ export class EventComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.eventData);
+
   }
 
   confirmSession() {
