@@ -66,15 +66,12 @@ export class EventsCarouselComponent implements OnInit {
       });
   }
 
-  onConfirmSession(teamEventId) {
-    console.log('teamEventId: ', teamEventId);
-
-    this.router.navigate(['/team-event-validation/match/3']);
-
+  onConfirmSession(teamEvent) {
     this.uiComponentsService.setIsLoading(true);
     setTimeout(() => { 
       this.uiComponentsService.setIsLoading(false);
-     }, 2000);
+      this.router.navigate([`/team-event-validation/${teamEvent.teamEventType}/${teamEvent.teamEventId}`]);
+     }, 1000);
   }
 
   onConvertSession(teamEventId) {

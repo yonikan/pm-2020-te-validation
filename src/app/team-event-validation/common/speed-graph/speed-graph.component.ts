@@ -19,7 +19,7 @@ export class SpeedGraphComponent implements OnInit, OnChanges {
     chart: {
       type: 'area',
       style: {
-        fontFamily: 'Work Sans'
+        fontFamily: 'Montserrat'
       },
       height: 210,
       backgroundColor: '#ffffff',

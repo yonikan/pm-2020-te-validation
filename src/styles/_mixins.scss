@@ -76,3 +76,55 @@
   // font-size: 30px;
   // height: 110px;
 }
+
+
+// Team Event Validation ==========================================================
+@mixin team-event-container() {
+  width: 800px;
+  background-color: #ffffff;
+  padding: 25px;
+  margin: 15px;
+
+  @media (max-width: $media-query-sm) {
+      width: 90%;
+      margin: 0 auto;
+  }
+}
+
+@mixin team-event-step() {
+  .step-footer {
+    border-top: 1px solid #cecece;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px 0;
+
+    .step-submit-btn {
+      width: 205px;
+      margin-top: 8px;
+      padding: 0 5px;
+      border-radius: 20px;
+      background-color: $color-green;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@mixin team-event-section() {
+  text-align: center;
+  margin: 55px 0;
+
+  h3 {
+      font-size: 40px;
+      margin: 35px 0 10px;
+      text-transform: capitalize;
+      color: #3d4762;
+  }
+
+  p {
+      font-size: 20px;
+      color: #96a1ae;
+      margin: 0;
+      margin-bottom: 20px;
+  }
+}
