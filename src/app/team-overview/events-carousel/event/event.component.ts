@@ -20,12 +20,11 @@ export class EventComponent implements OnInit {
   }
 
   confirmSession() {
-    const test = {
+    const event = {
       teamEventId: this.eventData.id,
       teamEventType: this.eventData.type
     };
-    console.log('test: ', test);
-    this.confirmSessionEmitter.emit(test);
+    this.confirmSessionEmitter.emit(event);
   }
 
   convertSession(eventId) {

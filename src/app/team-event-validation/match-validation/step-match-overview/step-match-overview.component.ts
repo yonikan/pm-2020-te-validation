@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
   selector: 'app-step-match-overview',
@@ -9,10 +10,14 @@ export class StepMatchOverviewComponent implements OnInit {
   @Input() stepMatchOverviewData: any;
   matchesTags;
 
-  constructor() { }
+  constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
     console.log('stepMatchOverviewData: ', this.stepMatchOverviewData);
+  }
+  
+  nextStep() {
+    this.teamEventValidationService.matchgDataOutput.step1OverviewData = 'test-output';
   }
 
   onTagsEmitter(tags) {

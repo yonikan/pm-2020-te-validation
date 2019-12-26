@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
   selector: 'app-step-match-subs',
@@ -8,13 +9,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StepMatchSubsComponent implements OnInit {
   @Input() stepMatchSubsData: any;
   
-  constructor() { }
+  constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
     console.log('stepMatchSubsData: ', this.stepMatchSubsData);
   }
+  
+  validateMatch(data) {
+    this.teamEventValidationService.matchgDataOutput.step5SubsData = 'test-output';
+    this.teamEventValidationService.validateMatch(data);
+  }
 
-  validateMatch() {
+  backStep() {
 
   }
 }

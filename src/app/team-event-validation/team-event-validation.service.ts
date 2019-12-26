@@ -16,24 +16,51 @@ export class TeamEventValidationService {
       test1: 'this is a test'
     }
   };
-
   matchgData: MatchValidation = {
-      step1OverviewData: {
-        test1: 'this is a test'
-      },
-      step2PlayersData: {
-        test1: 'this is a test'
-      },
-      step3FormationsData: {
-        test1: 'this is a test'
-      },
-      step4PhasesData: {
-        test1: 'this is a test'
-      },
-      step5SubsData: {
-        test1: 'this is a test'
-      }
-    };;
+    step1OverviewData: {
+      test1: 'this is a test'
+    },
+    step2PlayersData: {
+      test1: 'this is a test'
+    },
+    step3FormationsData: {
+      test1: 'this is a test'
+    },
+    step4PhasesData: {
+      test1: 'this is a test'
+    },
+    step5SubsData: {
+      test1: 'this is a test'
+    }
+  };
+  trainingDataOutput: TrainingValidation = {
+    step1GeneralData: {
+      
+    },
+    step2PlayersData: {
+      
+    },
+    step3PhasesData: {
+      
+    }
+  };
+  matchgDataOutput: MatchValidation = {
+    step1OverviewData: {
+
+    },
+    step2PlayersData: {
+
+    },
+    step3FormationsData: {
+
+    },
+    step4PhasesData: {
+
+    },
+    step5SubsData: {
+
+    }
+  };
 
   constructor() { }
 
@@ -46,12 +73,10 @@ export class TeamEventValidationService {
   }
 
   validateTraining(trainingPayload) {
-    console.log('VALIDATE WORKS!');
-    // sends this.trainingData to the backend
+    console.log('trainingDataOutput: ', this.trainingDataOutput);
   }
 
   validateMatch(matchayload) {
-    console.log('VALIDATE WORKS!');
-    // sends this.matchgData to the backend
+    console.log('matchgDataOutput: ', this.matchgDataOutput);
   }
 }
