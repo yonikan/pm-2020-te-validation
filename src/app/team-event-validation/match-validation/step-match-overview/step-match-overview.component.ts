@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-step-match-overview',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-match-overview.component.scss']
 })
 export class StepMatchOverviewComponent implements OnInit {
+  @Input() stepMatchOverviewData: any;
   matchesTags;
+
   constructor() { }
 
   ngOnInit() {
+    console.log('stepMatchOverviewData: ', this.stepMatchOverviewData);
   }
 
   onTagsEmitter(tags) {

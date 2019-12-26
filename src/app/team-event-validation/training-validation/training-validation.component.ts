@@ -16,9 +16,9 @@ export class TrainingValidationComponent implements OnInit {
 
   ngOnInit() {
     const trainingData = this.teamEventValidationService.getTrainingData();
-    this.step1Data = trainingData.step1Data;
-    this.step2Data = trainingData.step2Data;
-    this.step3Data = trainingData.step3Data;
+    this.step1Data = trainingData.step1GeneralData;
+    this.step2Data = trainingData.step2PlayersData;
+    this.step3Data = trainingData.step3PhasesData;
   }
 
   onValidateTraining(trainingPayload) {

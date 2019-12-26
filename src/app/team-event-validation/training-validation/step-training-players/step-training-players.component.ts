@@ -12,5 +12,6 @@ export class StepTrainingPlayersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('stepTrainingPlayersData: ', this.stepTrainingPlayersData);
   }
 }

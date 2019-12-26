@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-step-match-subs',
@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-match-subs.component.scss']
 })
 export class StepMatchSubsComponent implements OnInit {
-
+  @Input() stepMatchSubsData: any;
+  
   constructor() { }
 
   ngOnInit() {
+    console.log('stepMatchSubsData: ', this.stepMatchSubsData);
   }
 
   validateMatch() {

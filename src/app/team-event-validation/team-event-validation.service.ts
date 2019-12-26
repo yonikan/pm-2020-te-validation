@@ -7,67 +7,42 @@ import { TrainingValidation, MatchValidation } from './team-event-validation.mod
 export class TeamEventValidationService {
   trainingData: TrainingValidation = {
     step1GeneralData: {
-
+      test1: 'this is a test'
     },
     step2PlayersData: {
-      
+      test1: 'this is a test'
     },
     step3PhasesData: {
-      
+      test1: 'this is a test'
     }
   };
-  matchgData: MatchValidation = {
-    step1OverviewData: {
 
-    },
-    step2PlayersData: {
-      
-    },
-    step3FormationsData: {
-      
-    },
-    step4PhasesData: {
-      
-    },
-    step5SubsData: {
-      
-    }
-  };
+  matchgData: MatchValidation = {
+      step1OverviewData: {
+        test1: 'this is a test'
+      },
+      step2PlayersData: {
+        test1: 'this is a test'
+      },
+      step3FormationsData: {
+        test1: 'this is a test'
+      },
+      step4PhasesData: {
+        test1: 'this is a test'
+      },
+      step5SubsData: {
+        test1: 'this is a test'
+      }
+    };;
 
   constructor() { }
 
   getTrainingData(): any {
-    return {
-      step1OverviewData: {
-
-      },
-      step2PlayersData: {
-        
-      },
-      step3PhasesData: {
-        
-      }
-    };
+    return this.trainingData;
   }
 
   getMatchData(): any {
-    return {
-      step1OverviewData: {
-
-      },
-      step2PlayersData: {
-        
-      },
-      step3FormationsData: {
-        
-      },
-      step4PhasesData: {
-        
-      },
-      step5SubsData: {
-        
-      }
-    };
+    return this.matchgData;
   }
 
   validateTraining(trainingPayload) {

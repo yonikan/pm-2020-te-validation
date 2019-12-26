@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-step-match-formations',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./step-match-formations.component.scss']
 })
 export class StepMatchFormationsComponent implements OnInit {
+  @Input() stepMatchFormationsData: any;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('stepMatchFormationsData: ', this.stepMatchFormationsData);
   }
-
 }

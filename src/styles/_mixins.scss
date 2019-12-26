@@ -92,11 +92,27 @@
 }
 
 @mixin team-event-step() {
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+
   .step-footer {
     border-top: 1px solid #cecece;
     display: flex;
-    flex-direction: row-reverse;
     margin: 20px 0;
+    margin-top: auto;
+    padding: 15px 0;
+
+    .step-back-btn {
+      margin-left: auto;
+      width: 205px;
+      margin-top: 8px;
+      margin-right: 12px;
+      padding: 0 5px;
+      border-radius: 20px;
+      color: #828282;
+      text-transform: uppercase;
+    }
 
     .step-submit-btn {
       width: 205px;

@@ -18,11 +18,11 @@ export class MatchValidationComponent implements OnInit {
 
   ngOnInit() {
     const matchData = this.teamEventValidationService.getMatchData();
-    this.step1Data = matchData.step1Data;
-    this.step2Data = matchData.step2Data;
-    this.step3Data = matchData.step3Data;
-    this.step4Data = matchData.step4Data;
-    this.step5Data = matchData.step5Data;
+    this.step1Data = matchData.step1OverviewData;
+    this.step2Data = matchData.step2PlayersData;
+    this.step3Data = matchData.step3FormationsData;
+    this.step4Data = matchData.step4PhasesData;
+    this.step5Data = matchData.step5SubsData;
   }
 
   onValidateMatch(matchPayload) {
