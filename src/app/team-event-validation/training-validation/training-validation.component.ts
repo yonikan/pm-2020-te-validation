@@ -11,6 +11,7 @@ export class TrainingValidationComponent implements OnInit {
   step2Data: any;
   step3Data: any;
   trainingValidationPayload: any;
+  currentSelectedStep = 0;
 
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
@@ -21,6 +22,10 @@ export class TrainingValidationComponent implements OnInit {
     this.step3Data = trainingData.step3PhasesData;
   }
 
+  onStepSelectionEmitter(stepNumber) {
+    this.currentSelectedStep = stepNumber;
+  }
+  
   onValidateTraining(trainingPayload) {
     this.teamEventValidationService.validateTraining(trainingPayload);
   }

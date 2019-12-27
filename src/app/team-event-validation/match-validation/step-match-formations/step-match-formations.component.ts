@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
@@ -8,18 +8,20 @@ import { TeamEventValidationService } from '../../team-event-validation.service'
 })
 export class StepMatchFormationsComponent implements OnInit {
   @Input() stepMatchFormationsData: any;
+  @Output() stepSelectionEmitter = new EventEmitter<number>();
 
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
-    console.log('stepMatchFormationsData: ', this.stepMatchFormationsData);
+    
   }
 
   nextStep() {
     this.teamEventValidationService.matchDataOutput.step3FormationsData = 'test-output';
+    this.stepSelectionEmitter.emit(3);
   }
 
   backStep() {
-
+    this.stepSelectionEmitter.emit(1);
   }
 }

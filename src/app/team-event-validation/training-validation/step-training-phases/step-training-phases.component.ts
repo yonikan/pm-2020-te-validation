@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
@@ -7,13 +7,14 @@ import { TeamEventValidationService } from '../../team-event-validation.service'
   styleUrls: ['./step-training-phases.component.scss']
 })
 export class StepTrainingPhasesComponent implements OnInit {
-  @Input() stepTrainingPhasesData: any; 
+  @Input() stepTrainingPhasesData: any;
+  @Output() stepSelectionEmitter = new EventEmitter<number>();
   trainingPhases;
   
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
-    console.log('stepTrainingPhasesData: ', this.stepTrainingPhasesData);
+
   }
 
   validateTraining(data) {
@@ -22,6 +23,6 @@ export class StepTrainingPhasesComponent implements OnInit {
   }
 
   backStep() {
-
+    this.stepSelectionEmitter.emit(1);
   }
 }

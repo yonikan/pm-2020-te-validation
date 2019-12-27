@@ -89,8 +89,9 @@
   box-shadow: -4.9px 7.5px 50px 0 rgba(53, 61, 86, 0.1);
 
   @media (max-width: $media-query-sm) {
-      width: 90%;
-      margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
   }
 }
 

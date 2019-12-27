@@ -13,6 +13,7 @@ export class MatchValidationComponent implements OnInit {
   step4Data: any;
   step5Data: any;
   matchValidationPayload: any;
+  currentSelectedStep = 0;
 
   constructor(private teamEventValidationService: TeamEventValidationService) { }
 
@@ -23,6 +24,10 @@ export class MatchValidationComponent implements OnInit {
     this.step3Data = matchData.step3FormationsData;
     this.step4Data = matchData.step4PhasesData;
     this.step5Data = matchData.step5SubsData;
+  }
+
+  onStepSelectionEmitter(stepNumber) {
+    this.currentSelectedStep = stepNumber;
   }
 
   onValidateMatch(matchPayload) {
