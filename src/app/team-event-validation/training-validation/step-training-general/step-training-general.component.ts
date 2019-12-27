@@ -17,10 +17,12 @@ export class StepTrainingGeneralComponent implements OnInit {
     console.log('stepTrainingGeneralData: ', this.stepTrainingGeneralData);
   }
 
+  nextStep() {
+    this.teamEventValidationService.trainingDataOutput.step1GeneralData = 'test-output';
+  }
+
   onTagsEmitter(tags) {
     console.log(tags);
     this.trainingTags = tags;
-    // this.teamEventValidationService.matchgData.step1OverviewData = tags; // test the service
-    // console.log('this.teamEventValidationService.matchgData.step1OverviewData: ', this.teamEventValidationService.matchgData.step1OverviewData);
   }
 }

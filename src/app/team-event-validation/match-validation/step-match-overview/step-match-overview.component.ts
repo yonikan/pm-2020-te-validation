@@ -17,7 +17,7 @@ export class StepMatchOverviewComponent implements OnInit {
   }
   
   nextStep() {
-    this.teamEventValidationService.matchgDataOutput.step1OverviewData = 'test-output';
+    this.teamEventValidationService.matchDataOutput.step1OverviewData = 'test-output';
   }
 
   onTagsEmitter(tags) {

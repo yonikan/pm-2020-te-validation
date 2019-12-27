@@ -16,7 +16,7 @@ export class TeamEventValidationService {
       test1: 'this is a test'
     }
   };
-  matchgData: MatchValidation = {
+  matchData: MatchValidation = {
     step1OverviewData: {
       test1: 'this is a test'
     },
@@ -44,7 +44,7 @@ export class TeamEventValidationService {
       
     }
   };
-  matchgDataOutput: MatchValidation = {
+  matchDataOutput: MatchValidation = {
     step1OverviewData: {
 
     },
@@ -69,7 +69,7 @@ export class TeamEventValidationService {
   }
 
   getMatchData(): any {
-    return this.matchgData;
+    return this.matchData;
   }
 
   validateTraining(trainingPayload) {
@@ -77,6 +77,6 @@ export class TeamEventValidationService {
   }
 
   validateMatch(matchayload) {
-    console.log('matchgDataOutput: ', this.matchgDataOutput);
+    console.log('matchDataOutput: ', this.matchDataOutput);
   }
 }

@@ -16,7 +16,7 @@ export class StepMatchPlayersComponent implements OnInit {
   }
 
   nextStep() {
-    this.teamEventValidationService.matchgDataOutput.step2PlayersData = 'test-output';
+    this.teamEventValidationService.matchDataOutput.step2PlayersData = 'test-output';
   }
 
   backStep() {

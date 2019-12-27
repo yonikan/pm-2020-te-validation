@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TeamEventValidationService } from '../../team-event-validation.service';
 
 @Component({
   selector: 'app-step-training-phases',
@@ -7,16 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StepTrainingPhasesComponent implements OnInit {
   @Input() stepTrainingPhasesData: any; 
-  
   trainingPhases;
   
-  constructor() { }
+  constructor(private teamEventValidationService: TeamEventValidationService) { }
 
   ngOnInit() {
     console.log('stepTrainingPhasesData: ', this.stepTrainingPhasesData);
   }
 
-  validateTraining() {
+  validateTraining(data) {
+    this.teamEventValidationService.trainingDataOutput.step3PhasesData = 'test-output';
+    this.teamEventValidationService.validateTraining(data);
+  }
+
+  backStep() {
 
   }
 }

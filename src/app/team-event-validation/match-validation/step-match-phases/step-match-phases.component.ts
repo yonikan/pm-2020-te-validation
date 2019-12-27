@@ -16,7 +16,7 @@ export class StepMatchPhasesComponent implements OnInit {
   }
 
   nextStep() {
-    this.teamEventValidationService.matchgDataOutput.step4PhasesData = 'test-output';
+    this.teamEventValidationService.matchDataOutput.step4PhasesData = 'test-output';
   }
 
   backStep() {

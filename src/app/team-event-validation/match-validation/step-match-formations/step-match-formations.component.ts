@@ -16,7 +16,7 @@ export class StepMatchFormationsComponent implements OnInit {
   }
 
   nextStep() {
-    this.teamEventValidationService.matchgDataOutput.step3FormationsData = 'test-output';
+    this.teamEventValidationService.matchDataOutput.step3FormationsData = 'test-output';
   }
 
   backStep() {
