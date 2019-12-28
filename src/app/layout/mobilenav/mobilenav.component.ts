@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../../auth/auth.service';
 import { UserLogin } from '../../auth/user-login.model';
 import { StaffRoles } from '../../core/enums/staff-roles.enum';
+import { enumToString } from '../../core/helpers/helper-functions';
 
 @Component({
   selector: 'app-mobilenav',
@@ -30,7 +31,8 @@ export class MobilenavComponent implements OnInit {
       this.userImgUrl = userLoginData.imgUrl;
       this.userFirstName = userLoginData.firstName;
       this.userLastName = userLoginData.lastName;
-      this.userRole = StaffRoles[userLoginData.role];
+      // this.userRole = StaffRoles[userLoginData.role];
+      this.userRole = enumToString(StaffRoles, 1);
     });
 
     this.authStatusSub = this.authService
